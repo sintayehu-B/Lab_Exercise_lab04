@@ -7,7 +7,9 @@ h1{
     text-align: center;
 }
 .container{
-    
+	display: grid;
+	justify-content: center;
+	align-items: center;
 	width: 1000px;
 	height: 1000px;
 	background-color: rgb(33, 20, 220);
@@ -16,35 +18,42 @@ h1{
 .calculator{
 
 	width: 320px;
-	height: 550px;
+	height: 520px;
 	background-color: #eaedef;
 	margin: 0 auto;
 	top: 20px;
 	position: relative;
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(4, 100px);
 }
-.result{
+/* .result{
 	height: 120px;
-}
+} */
 .history{
+	display: inline;
 	text-align: right;
 	height: 20px;
 	margin: 0 20px;
 	padding-top: 20px;
 	font-size: 15px;
 	color: #919191;
+	
 }
-.output{
+#input_value{
+
 	text-align: right;
-	height: 60px;
-	margin: 10px 20px;
-    font-size: 30px;
-    padding-top: 25px;
+	height: 80px;
+    font-size: 25px;
+	padding-top: 50px;
+	word-wrap: break-word;
+	word-break: break-all;
 }
 
 #keyboard{
 	height: 400px;
+	
 }
 .operator, .number, .empty{
 	width: 50px;

@@ -22,35 +22,36 @@
                 <div class="history">
                     <p id="history-value"></p>
                 </div>
-                <div class="output">
+                <div class="output" name="">
                     <p id="output-value"></p>
                 </div>
             </div>
-            <div id="keyboard">
-                <button class="operator" id="clear">C</button>
-                <button class="operator" id="backspace">CE</button>
-                <button class="operator" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
-                <button class="number" id="7">7</button>
-                <button class="number" id="8">8</button>
-                <button class="number" id="9">9</button>
-                <button class="operator" id="*">&times;</button>
-                <button class="number" id="4">4</button>
-                <button class="number" id="5">5</button>
-                <button class="number" id="6">6</button>
-                <button class="operator" id="-">-</button>
-                <button class="number" id="1">1</button>
-                <button class="number" id="2">2</button>
-                <button class="number" id="3">3</button>
-                <button class="operator" id="+">+</button>
-                <button class="empty" id="empty"></button>
-                <button class="number" id="0">0</button>
-                <button class="empty" id="empty"></button>
-                <button class="operator" id="=">=</button>
+            <div name="Keyboard" id="keyboard">
+                <button class="operator" id="clear" onclick="clear()">C</button>
+                <button class="operator" id="backspace" onclick="backSpace()">CE</button>
+                <button class="operator" id="." onclick="dot()">.</button>
+                <button class="operator" id="/" onclick="division()">&#247;</button>
+                <button class="number" id="7" onclick="number7()">7</button>
+                <button class="number" id="8"onclick="number8()">8</button>
+                <button class="number" id="9"onclick="number9()">9</button>
+                <button class="operator" id="*" onclick="multiplication()">&times;</button>
+                <button class="number" id="4" onclick="number4()">4</button>
+                <button class="number" id="5" onclick="number5()">5</button>
+                <button class="number" id="6" onclick="number6()">6</button>
+                <button class="operator" id="-" onclick="subtraction()">-</button>
+                <button class="number" id="1" onclick="number1()">1</button>
+                <button class="number" id="2" onclick="number2()">2</button>
+                <button class="number" id="3" onclick="number3()">3</button>
+                <button class="operator" id="+" onclick="addition()">+</button>
+                <button class="empty" id="empty" onclick="empty()" ></button>
+                <button class="number" id="0" onclick="number0()">0</button>
+                <button class="empty" id="empty" onclick="empty()"></button>
+                <button class="operator" id="=" onclick="equalsTo()">=</button>
             </div> 
         </div>
     </div>
     <script src="./assets/js/calculator.js"></script>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
