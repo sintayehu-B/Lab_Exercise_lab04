@@ -1,149 +1,70 @@
-
-function subtraction(){
-    let number1 = prompt('the first Number ');
-    let number2 = prompt('the Second Number');
+function numberOne(){
     
-    let subtract = number1 - number2;
-
-    return subtract;
-
+    document.calculator.display.value +=1
 }
-
-function division(){
-    let number1 = prompt('The first number');
-    let number2 = prompt('The second number');
-    if (number1 <= 0 ) {
-        console.log("Can't be divided by zero");
-    }else{
-        
-        let divide = number1 / number2;
-        
-        return divide;
-    }
-
-    
+function numberTwo(){
+    document.calculator.display.value +=2
 }
-
-function square(){
-    let number = prompt("a number to square: ")
-    return number * number;
+function numberThree(){
+    document.calculator.display.value +=3
 }
-
-function addition(){
-    let inputNumber = [];
-    let input = prompt('how many number to add');
-    result = 0;
-    for (let i = 0; i < parseInt(input); i++) {
-        inputNumber[i] = prompt(" the number " + (i + 1));
-    }
-    
-    for(i in inputNumber){
-        result += parseInt(inputNumber[i])
-    }
-    return result
-
-    
+function numberFour(){
+    document.calculator.display.value +=4
+}
+function numberFive(){
+    document.calculator.display.value +=5
+}
+function numberSix(){
+    document.calculator.display.value =6
+}
+function numberSeven(){
+    document.calculator.display.value +=7
+}
+function numberEight(){
+    document.calculator.display.value +=8
+}
+function numberNine(){
+    document.calculator.display.value +=9
+}
+function numberZero(){
+    document.calculator.display.value +=0
 }
 function multiplication(){
-    let inputNumber = [];
-    let input = prompt('how many number to add');
-    result = 1;
-    for (let i = 0; i < parseInt(input); i++) {
-        inputNumber[i] = prompt(" the number " + (i + 1));
-    }
-    console.log(inputNumber);
-    for(i in inputNumber){
-        result *= parseInt(inputNumber[i])
-    }
-    return result
-
+    document.calculator.display.value +="*"
+}
+function division(){
     
+    if(document.calculator.display.value == 0){
+        alert('error zero divisor')
+    }else {
+        document.calculator.display.value +="/"
+    }
 }
-// function getHistory(){
-// 	return document.getElementById("history-value").innerText;
-// }
-// function printHistory(num){
-// 	document.getElementById("history-value").innerText=num;
-// }
-// function getOutput(){
-// 	return document.getElementById("output-value").innerText;
-// }
-// function printOutput(num){
-// 	if(num==""){
-// 		document.getElementById("output-value").innerText=num;
-// 	}
-// 	else{
-// 		document.getElementById("output-value").innerText=getFormattedNumber(num);
-// 	}	
-// }
-function number1(){
-    document.getElementById("history").innerText ="1"
-
+function subtraction(){
+    document.calculator.display.value +="-"
 }
-function number2(){
-    return document.result.input_value.value += "1"
-
+function addition(){
+    document.calculator.display.value +="+"
 }
-function number3(){
-    return document.Keyboard.input_value.value += "1"
-
+function clearCe(){
+    document.calculator.display.value=""
 }
-function number4(){
-    return document.Keyboard.input_value.value += "1"
-
+function equalsTo(){
+    
+    let Display= eval(document.calculator.display.value);
+    document.calculator.display.value = Display;
 }
-function number5(){
-    return document.Keyboard.input_value.value += "1"
-
-}
-function number6(){
-    return document.Keyboard.input_value.value += "1"
-
-}
-function number7(){
-    return document.Keyboard.input_value.value += "1"
-
-}
-function number8(){
-    return document.Keyboard.input_value.value += "1"
-
-}
-function number9(){
-    return document.Keyboard.input_value.value += "1"
-
-}
-function number0(){
-    return document.Keyboard.input_value.value += "1"
-
-}
-function clear(){
-    document.Keyboard.input_value.value = " ";
-
-}
-function number1(num){
-    document.keyboard.input_value.value = num
-
-}
-function dot(){
-    document.keyboard.input_value.value += 1
-
+function percent(){
+    let percent = eval(document.calculator.display.value / 100)
+    document.calculator.display.value = percent
 }
 
-// (function invoke(){
-//     let choice = parseInt(prompt('choose between the 5 functions \n 1 for Addition, \n  2 for subtraction, \n  3.for division, \n  4 for multiplication \n and 5 for squaring'))  ;
-//     switch(choice){
-//         case 1: console.log(addition());
-//         break;
-//         case 2: console.log(subtraction());
-//         break;
-//         case 3: console.log(division());
-//         break;
-//         case 4: console.log(multiplication());
-//         break;
-//         case 5: console.log(square());
-//         break;
-//         default: console.log('Wrong input try to insert 1-5 please');
-//         invoke();
-        
-//     }
-// })();
+function power(){
+    let power= eval(`Math.pow(document.calculator.display.value, document.calculator.display.value)`)
+    document.calculator.display.value = power
+}
+
+function squareRoot(){
+    let power= eval(`Math.pow(${eval(document.calculator.display.value, document.calculator.display.value)},0.5)`)
+    document.calculator.display.value = power
+}

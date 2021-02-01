@@ -17,7 +17,7 @@
 <body>
     <h1>Simple Calculator</h1>
     <div class="container" >
-        <div class="calculator w-10">
+        <div class="calculators w-10">
             <div class="result">
                 <div class="history">
                     <p id="history-value"></p>
@@ -27,26 +27,35 @@
                 </div>
             </div>
             <div name="Keyboard" id="keyboard">
-                <button class="operator" id="clear" onclick="clear()">C</button>
-                <button class="operator" id="backspace" onclick="backSpace()">CE</button>
-                <button class="operator" id="." onclick="dot()">.</button>
-                <button class="operator" id="/" onclick="division()">&#247;</button>
-                <button class="number" id="7" onclick="number7()">7</button>
-                <button class="number" id="8"onclick="number8()">8</button>
-                <button class="number" id="9"onclick="number9()">9</button>
-                <button class="operator" id="*" onclick="multiplication()">&times;</button>
-                <button class="number" id="4" onclick="number4()">4</button>
-                <button class="number" id="5" onclick="number5()">5</button>
-                <button class="number" id="6" onclick="number6()">6</button>
-                <button class="operator" id="-" onclick="subtraction()">-</button>
-                <button class="number" id="1" onclick="number1()">1</button>
-                <button class="number" id="2" onclick="number2()">2</button>
-                <button class="number" id="3" onclick="number3()">3</button>
-                <button class="operator" id="+" onclick="addition()">+</button>
-                <button class="empty" id="empty" onclick="empty()" ></button>
-                <button class="number" id="0" onclick="number0()">0</button>
-                <button class="empty" id="empty" onclick="empty()"></button>
-                <button class="operator" id="=" onclick="equalsTo()">=</button>
+                <form name="calculator">
+                    <input type="text" name="display" id="input_value" class="w-100"> <br>
+                    <input type="button"  class="btn btn-dark operator" value="CE" onclick="clearCe()">
+                    <input type="button"  class="btn btn-dark operator" value="/" onclick="division()">
+                    <input type="button"  class="btn btn-dark operator" value="*" onclick="multiplication()">
+                    <input type="button"  class="btn btn-dark operator" value="-" onclick="subtraction()">
+                    <input type="button"  class="btn btn-dark number" value="7" onclick="numberSeven()">
+                    <input type="button"  class="btn btn-dark number" value="8" onclick="numberEight()">
+                    <input type="button"  class="btn btn-dark number" value="9" onclick="numberNine()">
+                    
+                    <input type="button"  class="btn btn-dark operator" value="+" onclick="addition()">
+                    <input type="button"  class="btn btn-dark number" value="4" onclick="numberFour()">
+                    <input type="button"  class="btn btn-dark number" value="5" onclick="numberFive()">
+                    <input type="button"  class="btn btn-dark number" value="6" onclick="numberSix()">
+                    
+                    <input type="button"  class=" btn btn-dark operator" value="%" onclick="percent()">
+                    <input type="button"  class="btn btn-dark number" value="1" onclick="numberOne()">
+                    <input type="button"  class="btn btn-dark number" value="2" onclick="numberTwo()">
+                    <input type="button"  class="btn btn-dark number" value="3" onclick="numberThree()">
+                    <input type="button"  class="btn btn-dark operator" value="^" onclick="power()">
+                    
+                    
+                    <input type="button"  class="operator" value="" onclick="equalsTo()">
+                    <input type="button"  class="btn btn-dark number" value="0" onclick="numberZero()">
+                    <input type="button"  class="btn btn-dark operator" value="&#8730" onclick="squareRoot()">
+                    <input type="button"  class="btn btn-dark operator" value="=" onclick="equalsTo()">
+                    
+                    
+                </form>
             </div> 
         </div>
     </div>

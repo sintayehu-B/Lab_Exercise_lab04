@@ -15,7 +15,7 @@ h1{
 	background-color: rgb(33, 20, 220);
 	margin: 20px auto;	
 }
-.calculator{
+.calculators{
 
 	width: 320px;
 	height: 520px;
@@ -25,28 +25,15 @@ h1{
 	position: relative;
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	grid-template-columns: repeat(4, 100px);
-	grid-template-rows: minmax(120px, auto) repeat(4, 100px);
+	/* grid-template-columns: repeat(4, 100px);
+	grid-template-rows: minmax(120px, auto) repeat(4, 100px); */
 }
-/* .result{
-	height: 120px;
-} */
-.history{
-	display: inline;
-	text-align: right;
-	height: 20px;
-	margin: 0 20px;
-	padding-top: 20px;
-	font-size: 15px;
-	color: #919191;
-	
-}
+
 #input_value{
 
 	text-align: right;
-	height: 80px;
+	height: 90px;
     font-size: 25px;
-	padding-top: 50px;
 	word-wrap: break-word;
 	word-break: break-all;
 }
@@ -63,10 +50,11 @@ h1{
 	border-radius: 50%;
 	border-width: 0;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 18px;
 }
 .number, .empty{
-	background-color: #eaedef;
+	font-size: 20px;
+	background-color: brown
 }
 .number, .operator{
 	cursor: pointer;
@@ -76,24 +64,4 @@ h1{
 }
 .operator:focus, .number:focus, .empty:focus{
 	outline: 0;
-}
-button:nth-child(4){
-	font-size: 20px;
-	background-color: #20b2aa;
-}
-button:nth-child(8){
-	font-size: 20px;
-	background-color: #ffa500;
-}
-button:nth-child(12){
-	font-size: 20px;
-	background-color: #f08080;
-}
-button:nth-child(16){
-	font-size: 20px;
-	background-color: #7d93e0;
-}
-button:nth-child(20){
-	font-size: 20px;
-	background-color: #9477af;
 }
